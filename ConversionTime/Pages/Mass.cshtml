@@ -1,0 +1,27 @@
+﻿@page
+@model ConversionTime.Pages.MassModel
+@{
+    ViewData["Title"] = "Mass";
+}
+
+<h1>Mass</h1>
+<form method="post">
+    <div class="text-center">
+        <label for="Select1">Conversion Method:</label>
+        <select name="MassOpt">
+            <option value="1">Pounds to Ounces</option>
+            <option value="2">Ounces to Pounds</option>
+            <option value="3">Grams to Pounds</option>
+            <option value="4">Milligrams to Pounds</option>
+        </select>
+        <label for="entry1">Enter Mass to convert</label>
+        <input name="InputText" type="text" />
+        <input name="Convert" type="submit" value="Convert!" />
+    </div>
+</form>
+<p name="convertedTemp">
+    @Model.Po2Ou Ounces.
+    @Model.Ou2Po Pounds.
+    @Model.Gr2Po Pounds.
+    @Model.Mg2Po Pounds.
+</p>

@@ -1,0 +1,25 @@
+﻿@page
+@model ConversionTime.Pages.TemperatureModel
+@{
+    ViewData["Title"] = "Temperature";
+}
+
+<h1>Temperature</h1>
+<form method="post">
+    <div class="text-center">
+        <label for="TempOpt">Conversion Method: </label>
+        <select name="TempOpt">
+            <option value="1">Fahrenheit to Celsius</option>
+            <option value="2">Celsius to Fahrenheit</option>
+        </select><br />
+        <label for="entry1">Enter Temperature to convert</label>
+        <input name="InputText" type="text" />
+        <input type="submit" value="Convert!" />
+    </div>
+</form>
+<p name="convertedTemp">
+    @Model.FahtoCel Degrees.
+    @Model.CeltoFah Degrees.
+</p>
+@*<label>Results: @Model.InputText</label>*@
+
